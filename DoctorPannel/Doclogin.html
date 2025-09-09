@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Panel Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #bdcebd;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 370px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    .Id , .password {
+      width: 350px;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .submit{
+      width: 100%;
+      padding: 12px;
+      background-color: #064006;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit:hover {
+      background-color: #355d35;
+    }
+
+    .ForgetPass , .NewAccount{
+      color: #064006;
+      text-decoration: none;
+      font-size: 14px;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .ForgetPass:hover , .NewAccount:hover{
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Doctor Sign In</h1>
+    <form action="/DoctorPannel/Dashboard.html" method="post">
+      <label for="doctorId">Doctor ID</label>
+      <input class ="Id" type="text" id="doctorId" name="doctorId" required>
+
+      <label for="password">Password</label>
+      <input class="password" type="password" id="password" name="password" required pattern="a-zA-Z0-9" minlength="6" maxlength="32" title="Password should have atleast 8-32">
+
+      <a class="ForgetPass" href="/Doctor/ForgetPass.html">Forgot Password?</a>
+      <a class="NewAccount" href="/Doctor/SignUp.html">Don't Have an Account?</a>
+
+      <input class="submit" type="submit" value="Login">
+    </form>
+  </div>
+</body>
+</html>
